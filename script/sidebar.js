@@ -1,9 +1,4 @@
 // about
-fetch("/Kontainer/sidebar.html")
-  .then((response) => response.text())
-  .then((ini) => {
-    document.getElementById("navbar-template").innerHTML = ini;
-  });
 
 function openNav() {
   document.getElementById("mySidebar").style = "width: 250px; border: groove;";

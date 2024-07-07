@@ -9,11 +9,56 @@
 		rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 	/>
-	<link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" href="./index.css" />
 </head>
 
 <body>
-	<div id="navbar-template"></div>
+	<div id="navbar-template">
+		<nav id="mainNav">
+			<div class="kontiner">
+				<div class="block-menu">
+					<a href="" class="hmenu menu" onclick="pindahmenu()">Home</a>
+					<a id="explore" href="#" class="menu explore" onclick="pindahmenu()"
+						>Explore</a
+					>
+					<a href="#" id="about" class="menu about" onclick="pindahmenu()">About</a>
+				</div>
+
+				<div class="kontainer-image">
+					<button class="openbtn" onclick="toggleNav()">
+						<span id="menuicon">
+							<div></div>
+							<div></div>
+							<div></div>
+						</span>
+					</button>
+					<a href="" class="menu">XplDan</a>
+				</div>
+			</div>
+
+			<div class="menubawa">
+				<div class="search" id="hilang">
+					<form action="">
+						<input type="text" placeholder="Search bar ..." />
+						<button type="submit"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div id="mySidebar" class="sidebar">
+			<a href="javascript:void(0)" class="closebtn" onclick="toggleNav()"
+				><i class="fas fa-times"></i
+			></a>
+			<a class="hmenu" href="#" onclick="pindahmenu()"
+				><i class="fas fa-home"></i> Home</a
+			>
+			<a class="explore" href="#" onclick="pindahmenu()"
+				><i class="fas fa-compass"></i> Explore</a
+			>
+			<a href="#"><i class="fas fa-info-circle"></i> About</a>
+			<a href="#"><i class="fas fa-envelope"></i> Contact</a>
+		</div>
+	</div>
 
 	<!-- kontiner image preview -->
 	<div class="kontiner-preview">
@@ -38,8 +83,8 @@
 		</div>
 	</main>
 
-	<script src="/script/sidebar.js"></script>
-	<script type="module" src="/script/index.js"></script>
+	<script src="./script/sidebar.js"></script>
+	<script type="module" src="./script/index.js"></script>
 </body>
 </html>
 
