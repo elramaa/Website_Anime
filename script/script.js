@@ -1,6 +1,13 @@
 $().ready(() => {
   // INITIALIZING GLOBAL VARIABLE
   const search = location.search.replace("?search=", "");
+  // CLEARING UI IF DOESN'T NEEDED
+  if (search.length != 0) {
+    $("#banner").remove();
+    $("#subheader")
+      .removeClass("uppercase")
+      .text(`Search result for ${search.replace("+", " ")}`);
+  }
   // FETCHING ANIME LIST
   $.getJSON(
     search.length == 0
