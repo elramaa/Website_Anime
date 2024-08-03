@@ -1,5 +1,5 @@
 $().ready(() => {
-  $("#icon").href = location.origin + location.pathname;
+  $("#icon").attr("href", location.origin + location.pathname);
   // INITIALIZING GLOBAL VARIABLE
   const search = location.search.replace("?search=", "");
   console.log(search);
