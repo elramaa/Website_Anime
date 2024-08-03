@@ -45,10 +45,10 @@
     <header
       class="relative w-full h-16 p-2 lg:px-8 flex justify-between items-center"
     >
-      <div class="flex items-center">
+      <a href="http://localhost:5500" class="flex items-center">
         <img src="assets/icon.png" alt="Icon" class="size-10" />
         <h1 class="text-2xl text-white font-semibold">Renime</h1>
-      </div>
+      </a>
       <nav
         class="opacity-0 translate-x-32 lg:opacity-100 lg:translate-x-0 absolute top-full right-2 max-lg:p-4 lg:static max-lg:w-[45vw] flex max-lg:flex-col *:cursor-pointer lg:items-center lg:gap-8 max-lg:bg-secondary text-white hover:*:text-white/80 rounded-xl transition-all duration-700"
       >
@@ -84,7 +84,7 @@
           </div>
         </div>
       </nav>
-      <div
+      <form
         id="search-bar"
         class="opacity-0 lg:opacity-100 translate-y-8 lg:translate-y-0 max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 top-full flex items-center px-4 w-4/5 lg:w-1/4 h-12 lg:h-8 gap-2 bg-secondary lg:bg-white rounded-full transition-all duration-1000"
       >
@@ -94,8 +94,10 @@
           name="search"
           class="max-lg:bg-secondary max-lg:text-white max-lg:placeholder:text-gray-200 grow outline-none"
         />
-        <i class="block max-lg:text-white bi bi-search"></i>
-      </div>
+        <button type="submit">
+          <i class="block max-lg:text-white bi bi-search"></i>
+        </button>
+      </form>
       <div class="lg:hidden flex gap-2 text-white text-xl">
         <button id="search-btn">
           <i class="bi bi-search"></i>

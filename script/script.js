@@ -1,7 +1,11 @@
 $().ready(() => {
+  // INITIALIZING GLOBAL VARIABLE
+  const search = location.search.replace("?search=", "");
   // FETCHING ANIME LIST
   $.getJSON(
-    "https://api.jikan.moe/v4/top/anime?filter=airing&type=tv",
+    search.length == 0
+      ? "https://api.jikan.moe/v4/top/anime?filter=airing&type=tv"
+      : `https://api.jikan.moe/v4/anime?q=${search}`,
     function ({ data }) {
       data.slice(0, $(window).innerWidth() > 1024 ? 10 : 5).forEach((anime) => {
         const card = document.createElement("div");
@@ -24,7 +28,11 @@ $().ready(() => {
   );
   // ADD EVENT
   $("#search-btn").click(() => {
-    $("#search-bar").toggleClass("opacity-100 translate-y-0");
+    $("#search-bar")
+      .toggleClass("opacity-100 translate-y-0")
+      .children("input")
+      .focus()
+      .blur(() => $("#search-bar").toggleClass("opacity-100 translate-y-0"));
   });
   $("#menu-btn").click(() => {
     $("nav").toggleClass("opacity-100 translate-x-0");
