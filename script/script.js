@@ -5,7 +5,6 @@ $().ready(() => {
   console.log(search);
   // CLEARING UI IF DOESN'T NEEDED
   if (search.length != 0) {
-    $("#banner").remove();
     $("#subheader")
       .removeClass("uppercase")
       .text(`Search result for ${search.replaceAll("+", " ")}`);
